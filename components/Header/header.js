@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import classes from "./main-header.module.css";
-import Logo from "@/public/images/logo.png";
+import Logo from "@/public/logo.png";
 import MainHeaderBackground from "./mainHeaderBackground";
 import NavLink from "./nav-link";
 export default function MealsHeader() {

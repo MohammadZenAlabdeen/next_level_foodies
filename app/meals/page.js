@@ -5,12 +5,13 @@ import { getAllMeals } from "@/lib/meals";
 import { Suspense } from "react";
 export async function Meals() {
   const meals = await getAllMeals();
+
   return <MealsGrid meals={meals} />;
 }
-export const metadata={
-    title:'Explore Meals',
-    description:'Here you can see all meals added by our cheffs and users'
-}
+export const metadata = {
+  title: "Explore Meals",
+  description: "Here you can see all meals added by our cheffs and users",
+};
 export default function Page() {
   return (
     <>
@@ -25,9 +26,9 @@ export default function Page() {
         </p>
       </header>
       <main className={classes.main}>
-        <Suspense fallback={
-            <p className={classes.loading}>Fetching meals...</p>
-        }>
+        <Suspense
+          fallback={<p className={classes.loading}>Fetching meals...</p>}
+        >
           <Meals />
         </Suspense>
       </main>
